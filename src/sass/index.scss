@@ -1,2 +1,78 @@
 @import './common';
 @import './example';
+
+.gallery{
+    display:flex;
+    flex-wrap: wrap;
+    margin: -10px;
+    justify-content: center;
+}
+
+.photo-card{
+    
+    margin: 10px;
+    border: 1px solid lighten($color: #a39e9e, $amount: 1);
+    box-shadow: 2px 2px 2px rgb(190, 181, 181);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    img{
+        width: 100%;
+    }
+    @media screen and (min-width: 320px) {
+        width: 100vw;
+    }
+    @media screen and (min-width: 425px) {
+        width: 400px;
+    }
+    @media screen and (min-width: 1440px) {
+            width: calc(100vw / 4 - 30px);
+    }
+    
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: rgb(48, 48, 133);
+    margin-bottom: 30px;
+
+    & :not(:last-child){
+        margin-right: 15px;
+    }
+}
+
+button[type="submit"]{
+    padding: 10px;
+    background-color: bisque;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px rgb(121, 114, 114);
+    border: none;
+    font-weight: bold;
+
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+
+    p:not(:last-child){
+        margin-right: 5px;
+    }
+    p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+    }
+}
+
+b{
+    margin-bottom: 10px;
+}
